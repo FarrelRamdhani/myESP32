@@ -86,3 +86,35 @@ void loop(){
   //Apabila program tidak berjalan dengan baik, lakukan troubleshooting dengan cara
   Serial.println(firebaseData.errorReason());  
 }
+
+  //-----------------------------------------------------// Apabila get.() Tidak Berfungsi   //-----------------------------------------------------//
+
+//Beberapa kondisi memungkinkan berberapa fungsi tidak dapat dijalankan seperti biasanya, berikut adalah kumpulan fungsi yang dapat digunakan pada fitur get atau mengambil data dari realtime database
+
+void getData(){
+  //Data Int
+  if(Firebase.getInt(firebaseData, "path")){
+    dataInt = (firebaseData.intData());
+  } else{}
+  
+  //Data String
+  if(Firebase.getString(firebaseData, "path")){
+    dataString = (firebaseData.stringData());
+  } else{}
+  
+  //Data Float
+  if(Firebase.getFloat(firebaseData, "path")){
+    dataFloat = (firebaseData.floatData());
+  } else{}
+  
+  //Data Double
+  if(Firebase.getDouble(firebaseData, "path")){
+    dataDouble = (firebaseData.doubleData());
+  } else{}
+  
+  //Data Bool
+  if(Firebase.getBool(firebaseData, "path")){
+    dataBool = (firebaseData.boolData());
+  } else{}
+  
+}
